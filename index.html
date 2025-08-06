@@ -7,19 +7,81 @@
     <title>Login</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Login</h1>
-      <form action="">
-        <input type="text" placeholder="Username" />
-        <input type="password" placeholder="Password" />
-        <button type="submit">Login</button>
-      </form>
-    </div>
+    <main class="container">
+      <div class="back-link-wrapper">
+        <div class="back-link">
+          <img src="./images//Arrow.svg" alt="" />
+          <span>Back</span>
+        </div>
 
-    <div class="signup-container">
-      <img src="./images/facebook.png" alt="facebook" class="icon" />
-      <span class="signup-text">Sign up with Facebook</span>
-    </div>
+      </div>
+      <div class="content-container">
+        <p class="subtitle">Start from free</p>
+        <h2>Create an account</h2>
+
+        <div class="social-buttons">
+          <button>
+            <img src="./images/google.svg" alt="" />
+            <span> Sign up with Google </span>
+          </button>
+          <button>
+            <img src="./images/facebook.svg" alt="" />
+            <span> Sign up with Facebook </span>
+          </button>
+        </div>
+
+        <div class="divider">Or use your email for registration</div>
+
+        <form id="signupForm">
+          <div class="row">
+            <div class="form-group input-wrapper">
+              <input type="text" id="firstName" class="form-input" placeholder=" " />
+              <label for="firstName" class="form-label">First Name</label>
+            </div>
+            <div class="form-group">
+              <input type="text" id="lastName" class="form-input" placeholder=" " />
+              <label for="lastName" class="form-label">Last Name</label>
+            </div>
+          
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" class="form-input" placeholder=" " />
+            <label for="email" class="form-label">Email</label>
+          </div>
+          <div class="password-field">
+            <div class="form-group input-wrapper">
+              <input type="password" id="password" class="form-input" placeholder=" " />
+              <label for="password" class="form-label">Password</label>
+              <span class="eye"><img src="./images/eye.svg" alt="" id="toggleEye"></span>
+            </div>
+            <div class="rules">
+              <div class="rule" id="lengthRule">
+                <img src="./images/un-check.svg" alt="">
+                <span>8 Characters min.</span>
+              </div>
+              <div class="rule" id="numberRule">
+                <img src="./images/un-check.svg" alt="">
+                <span>One number</span>
+              </div>
+            </div>
+          </div>
+
+          <label class="checkbox-container">
+            <input type="checkbox" required />
+            <span
+              >By creating account, you agree to accept our Privacy Policy,
+              Terms of Service and Notification settings.</span
+            >
+          </label>
+
+          <button type="submit" class="submit">Create an Free Account!</button>
+        </form>
+
+        <div class="login-link">
+          Already have an account? <a href="#">Log in</a>
+        </div>
+      </div>
+    </main>
 
     <script src="script.js"></script>
   </body>
