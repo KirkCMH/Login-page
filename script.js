@@ -2,6 +2,7 @@ const passwordInput = document.getElementById('password');
 const lengthRule = document.getElementById('lengthRule');
 const numberRule = document.getElementById('numberRule');
 const form = document.getElementById('signupForm');
+const errorMsg = document.getElementById('errorMsg');
 
 const checkIcon = './images/checked.svg';
 const uncheckIcon = './images/un-check.svg';
@@ -34,17 +35,32 @@ function validatePassword() {
   form.addEventListener('submit', function (e) {
     validatePassword(); // 確保即時更新
     const isValid = lengthRule.classList.contains('valid') && numberRule.classList.contains('valid');
-    if (!isValid) {
-      e.preventDefault();
-      errorMsg.style.display = 'block';
+    const requiredFields = document.querySelectorAll('.require');
+    let allValid = true;
+
+    requiredFields.forEach((field) => {
+      const isEmpty = !field.value.trim();
+      if (isEmpty) {
+        field.style.border = '2px solid red'; // 加紅框
+        allValid = false;
+      } else {
+        field.style.border = ''; // 移除紅框
+      }
+    });
+
+    if (!allValid && !isValid) {
+      e.preventDefault(); // 阻止送出
+      document.getElementById('errorMsg').style.display = 'flex';
     } else {
-      errorMsg.style.display = 'none';
-      alert('Form submitted!');
+      document.getElementById('errorMsg').style.display = 'none';
     }
   });
 
   const eye =  document.getElementById('toggleEye');
+  const rules = document.querySelector(".rules");
   document.getElementById('toggleEye').addEventListener('click', () => {
     const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
     passwordInput.setAttribute('type', type);
+    if(type === 'text') rules.style.display = 'flex';
+    if(type === 'password') rules.style.display = 'none';
   });

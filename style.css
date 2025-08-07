@@ -5,6 +5,8 @@
   --button-gray: #ababab;
   --black: #000000;
   --white: #ffffff;
+  --danger-outline: #D71920;
+  --danger-inner: #F5C4C6;
 }
 
 * {
@@ -60,6 +62,18 @@ h2 {
   font-size: 26px;
 }
 
+.warning{
+  display: none;
+  align-items: start;
+  flex-grow: 1;
+  margin-top: 16px;
+  padding: 16px;
+  gap: 12px;
+  border: 1px solid var(--danger-outline);
+  border-radius: 4px;
+  background-color: var(--danger-inner);
+}
+
 p.subtitle {
   margin-bottom: 8px;
   color: #000;
@@ -113,10 +127,6 @@ p.subtitle {
   content: "";
   flex: 1;
   border-bottom: 1px solid var(--black);
-}
-
-.divider:not(:empty)::before {
-  margin-right: 0.5em;
 }
 
 .divider:not(:empty)::after {
@@ -187,7 +197,7 @@ input[type="password"] {
   top: 6px;
   left: 12px;
   font-size: 12px;
-  color: #444;
+  color: var(--text-gray);
 }
 
 .form-input:focus + .form-label {
@@ -209,7 +219,7 @@ input[type="password"] {
 }
 
 .rules {
-  display: flex;
+  display: none;
   margin: 8px 0;
   gap: 14px;
 }
@@ -270,6 +280,10 @@ button.submit {
   border-radius: 6px;
   font-size: 15px;
   cursor: pointer;
+}
+
+button.submit:hover{
+  box-shadow: var(--primary);
 }
 
 .login-link {

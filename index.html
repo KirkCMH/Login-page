@@ -19,6 +19,11 @@
         <p class="subtitle">Start from free</p>
         <h2>Create an account</h2>
 
+        <div class="warning" id="errorMsg">
+          <img src="./images/warning-circle.svg" alt="">
+          <span>Please complete all the required fields to proceed.</span>
+        </div>
+
         <div class="social-buttons">
           <button>
             <img src="./images/google.svg" alt="" />
@@ -35,22 +40,22 @@
         <form id="signupForm">
           <div class="row">
             <div class="form-group input-wrapper">
-              <input type="text" id="firstName" class="form-input" placeholder=" " />
+              <input type="text" id="firstName" class="form-input require" placeholder=" " />
               <label for="firstName" class="form-label">First Name</label>
             </div>
             <div class="form-group">
-              <input type="text" id="lastName" class="form-input" placeholder=" " />
+              <input type="text" id="lastName" class="form-input require"  placeholder=" " />
               <label for="lastName" class="form-label">Last Name</label>
             </div>
           
           </div>
           <div class="form-group">
-            <input type="email" id="email" class="form-input" placeholder=" " />
+            <input type="email" id="email" class="form-input require" placeholder=" " />
             <label for="email" class="form-label">Email</label>
           </div>
           <div class="password-field">
             <div class="form-group input-wrapper">
-              <input type="password" id="password" class="form-input" placeholder=" " />
+              <input type="password" id="password" class="form-input require" placeholder=" " />
               <label for="password" class="form-label">Password</label>
               <span class="eye"><img src="./images/eye.svg" alt="" id="toggleEye"></span>
             </div>
