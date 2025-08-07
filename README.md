@@ -13,7 +13,7 @@ A responsive and accessible account registration form UI built with HTML, CSS, a
 
 ### 🌐 Option 2: Use Live Preview
 - You can drag the `index.html` into your browser.
-- Or linked to github-page [SignUp Page - Kirk](https://markdown.com.cn "最好的markdown教程").
+- Or linked to github-page [SignUpPages](https://kirkcmh.github.io/SignUpPages/ "SignUp Page").
 
 ---
 
